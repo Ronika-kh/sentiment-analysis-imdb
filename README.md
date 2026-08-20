@@ -1,90 +1,101 @@
 # IMDb Sentiment Analysis
 
-A machine learning project for classifying IMDb movie reviews as **positive** or **negative**.
+A machine learning project for classifying IMDb movie reviews as **positive** or **negative** using Natural Language Processing (NLP) and machine learning techniques.
 
 ## 📌 Project Overview
 
 This project performs sentiment analysis on IMDb movie reviews using Natural Language Processing (NLP) and machine learning techniques.
 
-The dataset contains **50,000 movie reviews** with two sentiment classes: positive and negative. The data is split into training and testing sets using an 80/20 ratio.
+The dataset contains **50,000 movie reviews** with two sentiment classes:
 
-## 🧠 Methods
+- Positive
+- Negative
 
-The project uses:
+The data is split into training and testing sets using an **80/20 ratio**.
 
-* **TF-IDF** for text feature extraction
-* **Logistic Regression**
-* **Linear SVM (LinearSVC)**
-* **Scikit-learn Pipelines**
-* Classification Report
-* Confusion Matrix
+## 🛠️ Technologies Used
 
-For TF-IDF, the project uses English stop-word removal, up to 20,000 features, and word n-grams ranging from 1 to 2.
+- Python
+- Pandas
+- Scikit-learn
+- Jupyter Notebook
+- TF-IDF Vectorization
+- Logistic Regression
+- Linear SVM
 
-## 📊 Dataset
+## 🔍 Methodology
 
-The dataset contains:
+The project follows these main steps:
 
-* **50,000 reviews**
-* **25,000 positive reviews**
-* **25,000 negative reviews**
-* 2 columns: `review` and `sentiment`
+1. Load and explore the IMDb dataset.
+2. Prepare the review text and sentiment labels.
+3. Split the dataset into training and testing sets.
+4. Convert text reviews into numerical features using **TF-IDF**.
+5. Train machine learning classification models.
+6. Evaluate the models using accuracy, classification reports, and confusion matrices.
+7. Compare the classification results.
 
-There are no missing values in the dataset.
+## 🤖 Machine Learning Models
 
-## 📈 Results
+### Logistic Regression
 
-| Model               |   Accuracy |
-| ------------------- | ---------: |
-| Logistic Regression | **90.01%** |
-| Linear SVM          | **90.52%** |
+Logistic Regression is used as a linear classification model to predict whether a movie review is positive or negative.
 
-The **Linear SVM** achieved the best accuracy in this project.
+### Linear SVM
 
-### Linear SVM Confusion Matrix
+Linear Support Vector Machine (Linear SVM) is also used for text classification and comparison with Logistic Regression.
 
-```text
-[[4488  512]
- [ 436 4564]]
-```
+## 📊 Results
 
-## 🔎 Example Predictions
+The best achieved classification accuracy was:
 
-The trained models were also tested on custom reviews such as:
+### **91.1% Accuracy**
 
-* `"i hate that"`
-* `"that was terrible"`
+This result shows that the model can effectively classify IMDb movie reviews into positive and negative sentiment categories.
 
-The models were able to classify these sample reviews as negative.
+## 📈 Evaluation
 
-## 🛠️ Technologies
+The models are evaluated using:
 
-* Python
-* Pandas
-* Scikit-learn
-* Jupyter Notebook
-* NLP
-* Machine Learning
+- Accuracy Score
+- Classification Report
+- Confusion Matrix
+
+These metrics provide an overview of the classification performance.
 
 ## 📂 Project Structure
 
 ```text
 sentiment-analysis-imdb/
 │
-├── sentiment_analysis.ipynb
-└── README.md
-```
+├── README.md
+├── requirements.txt
+└── sentiment_analysis.ipynb
 
-## 🚀 How to Run
 
-1. Clone this repository.
-2. Make sure the IMDb dataset is available in the project directory.
-3. Install the required Python libraries.
-4. Open `sentiment_analysis.ipynb` using Jupyter Notebook or JupyterLab.
-5. Run the notebook cells.
+🚀 How to Run
+1. Clone the repository
+git clone https://github.com/Ronika-kh/sentiment-analysis-imdb.git
+2. Install the required libraries
+pip install -r requirements.txt
+3. Open the Jupyter Notebook
+jupyter notebook sentiment_analysis.ipynb
+4. Run the notebook
 
-## 👩‍💻 Author
+Make sure the IMDb dataset is available in the notebook's working directory, then run the cells in order.
 
-**Ronika-kh**
+📚 Dataset
 
-GitHub: [Ronika-kh](https://github.com/Ronika-kh)
+The project uses the IMDb movie review dataset containing 50,000 labeled reviews.
+
+Each review belongs to one of two sentiment classes:
+
+positive
+negative
+🎯 Conclusion
+
+This project demonstrates how Natural Language Processing and machine learning can be used to perform sentiment analysis on movie reviews.
+
+Using TF-IDF features and machine learning classification models, the project achieved an accuracy of 91.1%.
+
+Author: Ronika-kh
