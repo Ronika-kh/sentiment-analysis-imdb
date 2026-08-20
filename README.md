@@ -4,14 +4,14 @@ A machine learning project for classifying IMDb movie reviews as **positive** or
 
 ## 📌 Project Overview
 
-This project performs sentiment analysis on IMDb movie reviews using Natural Language Processing (NLP) and machine learning techniques.
+This project performs sentiment analysis on IMDb movie reviews.
 
-The dataset contains **50,000 movie reviews** with two sentiment classes:
+The dataset contains **50,000 labeled movie reviews**:
 
-- Positive
-- Negative
+- 25,000 Positive reviews
+- 25,000 Negative reviews
 
-The data is split into training and testing sets using an **80/20 ratio**.
+The data is split into training and testing sets using an **80/20 split**.
 
 ## 🛠️ Technologies Used
 
@@ -27,75 +27,103 @@ The data is split into training and testing sets using an **80/20 ratio**.
 
 The project follows these main steps:
 
-1. Load and explore the IMDb dataset.
-2. Prepare the review text and sentiment labels.
-3. Split the dataset into training and testing sets.
-4. Convert text reviews into numerical features using **TF-IDF**.
-5. Train machine learning classification models.
-6. Evaluate the models using accuracy, classification reports, and confusion matrices.
-7. Compare the classification results.
+1. Load and inspect the IMDb dataset.
+2. Check the data and sentiment distribution.
+3. Clean and prepare the review text.
+4. Split the data into training and testing sets.
+5. Convert text into numerical features using TF-IDF.
+6. Train machine learning classification models.
+7. Evaluate model performance.
+8. Compare the results.
 
 ## 🤖 Machine Learning Models
 
 ### Logistic Regression
 
-Logistic Regression is used as a linear classification model to predict whether a movie review is positive or negative.
+Logistic Regression is used for binary sentiment classification.
 
 ### Linear SVM
 
-Linear Support Vector Machine (Linear SVM) is also used for text classification and comparison with Logistic Regression.
+Linear Support Vector Machine (Linear SVM) is used for text classification and model comparison.
 
 ## 📊 Results
 
-The best achieved classification accuracy was:
+The best achieved accuracy on the test data was:
 
 ### **91.1% Accuracy**
 
-This result shows that the model can effectively classify IMDb movie reviews into positive and negative sentiment categories.
+The model successfully classifies IMDb movie reviews into positive and negative sentiment categories.
 
 ## 📈 Evaluation
 
-The models are evaluated using:
+Model performance is evaluated using:
 
 - Accuracy Score
 - Classification Report
 - Confusion Matrix
 
-These metrics provide an overview of the classification performance.
+## 📚 Dataset
 
-## 📂 Project Structure
+This project uses the **IMDb Large Movie Review Dataset**.
+
+The dataset contains 50,000 labeled movie reviews:
+
+- 25,000 Positive reviews
+- 25,000 Negative reviews
+
+### Download Dataset
+
+You can download the `IMDB Dataset.csv` file from Zenodo:
+
+[Download IMDB Dataset.csv](https://zenodo.org/records/7929635)
+
+After downloading, place the dataset in the project directory:
 
 ```text
 sentiment-analysis-imdb/
 │
+├── IMDB Dataset.csv
 ├── README.md
 ├── requirements.txt
 └── sentiment_analysis.ipynb
 
 
+Then open sentiment_analysis.ipynb and run the cells from top to bottom.
+
+Original Dataset
+
+The original Large Movie Review Dataset was created by Maas et al. (2011).
+
+Official Stanford Dataset
+
+📂 Project Structure
+sentiment-analysis-imdb/
+│
+├── README.md
+├── requirements.txt
+└── sentiment_analysis.ipynb
 🚀 How to Run
 1. Clone the repository
 git clone https://github.com/Ronika-kh/sentiment-analysis-imdb.git
 2. Install the required libraries
 pip install -r requirements.txt
-3. Open the Jupyter Notebook
+3. Download the dataset
+
+Download IMDB Dataset.csv from the dataset link above and place it in the project directory.
+
+4. Open the notebook
 jupyter notebook sentiment_analysis.ipynb
-4. Run the notebook
+5. Run the notebook
 
-Make sure the IMDb dataset is available in the notebook's working directory, then run the cells in order.
+Run the cells from top to bottom to reproduce the analysis and results.
 
-📚 Dataset
-
-The project uses the IMDb movie review dataset containing 50,000 labeled reviews.
-
-Each review belongs to one of two sentiment classes:
-
-positive
-negative
 🎯 Conclusion
 
-This project demonstrates how Natural Language Processing and machine learning can be used to perform sentiment analysis on movie reviews.
+This project demonstrates how Natural Language Processing and machine learning can be used for sentiment analysis.
 
-Using TF-IDF features and machine learning classification models, the project achieved an accuracy of 91.1%.
+Using TF-IDF features and machine learning classification models, the project achieved an accuracy of 91.1% on the test data.
+
+
+
 
 Author: Ronika-kh
